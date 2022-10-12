@@ -1,7 +1,45 @@
 ---
 import ContentSection from "./content-section.astro";
 import ProjectCard from "./projects-card.astro";
-import projects from "../data/showcase/projects.json";
+import AmazonImg from "../data/showcase/images/amazon.png";
+import FacebookImg from "../data/showcase/images/facebook.webp";
+import TwitchImg from "../data/showcase/images/twitch.png";
+import FirebaseImg from "../data/showcase/images/firebase-blog.png";
+import SpotifyImg from "../data/showcase/images/spotify.jpg";
+import MrFischImg from "../data/showcase/images/mrfisch.png";
+const projects = [
+  {
+    "title": "Amazon",
+    "image": AmazonImg, 
+    "url": "https://amazon.com/"
+  },
+  {
+    "title": "Facebook",
+    "image": FacebookImg,
+    "url": "https://www.facebook.com/"
+  },
+  {
+    "title": "Twitch",
+    "image": TwitchImg,
+    "url": "https://www.twitch.tv/"
+  },
+  {
+    "title": "Spotify",
+    "image": SpotifyImg,
+    "url": "https://www.spotify.com/"
+  },
+  {
+    "title": "The Firebase Blog",
+    "image": FirebaseImg,
+    "url": "https://www.firebase.blog/"
+  },
+  {
+    "title": "Mr Fisch",
+    "image": MrFischImg,
+    "url": "https://mrfisch.flemis.xyz/"
+  }
+]
+
 ---
 
 <ContentSection title="Projetos" id="projects">
