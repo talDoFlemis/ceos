@@ -1,0 +1,126 @@
+---
+import ContentSection from "./content-section.astro";
+import TechnologiesList from "./technologies-list.astro";
+
+const cms = [
+  {
+    title: "Wordpress",
+    icon: "cms/wordpress",
+    url: "https://wordpress.org/",
+  },
+  {
+    title: "Shopify",
+    icon: "cms/shopify",
+    url: "https://shopify.com/",
+  },
+  {
+    title: "Wix",
+    icon: "cms/wix",
+    url: "https://pt.wix.com/",
+  },
+  {
+    title: "Woo",
+    icon: "cms/woo",
+    url: "https://woocommerce.com/",
+  },
+  {
+    title: "Hubspot",
+    icon: "cms/hubspot",
+    url: "https://br.hubspot.com/",
+  },
+  {
+    title: "Joomla",
+    icon: "cms/joomla",
+    url: "https://joomla.org/",
+  },
+];
+
+const frameworks = [
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Preact",
+    icon: "frameworks/preact",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "Svelte",
+    icon: "frameworks/svelte",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "Vue",
+    icon: "frameworks/vue",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "Solid",
+    icon: "frameworks/solid",
+    url: "https://www.solidjs.com/",
+  },
+  {
+    title: "Lit",
+    icon: "frameworks/lit",
+    url: "https://lit.dev/",
+  },
+];
+
+
+const platforms = [
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Vercel",
+    icon: "platforms/vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Render",
+    icon: "platforms/render",
+    url: "https://render.com/",
+  },
+  {
+    title: "Cloudflare",
+    icon: "fa-brands:cloudflare",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "GitLab",
+    icon: "fa-brands:gitlab",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="Tecnologias" id="technologies">
+  <Fragment slot="lead">
+    Tem uma <span class="text-primary">tecnologia</span> em mente?<br/>
+    A CEOS pode <span class="text-primary">construir</span> uma aplicação com ela
+  </Fragment>
+  <TechnologiesList
+    title="CMS"
+    data={cms}
+    url="/technologies"
+  />
+  <TechnologiesList
+    title="Frameworks"
+    data={frameworks}
+    url="/technologies"
+  />
+  <TechnologiesList
+    title="Platforms"
+    data={platforms}
+    url="/technologies"
+  />
+</ContentSection>
