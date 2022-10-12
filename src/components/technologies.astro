@@ -68,7 +68,6 @@ const frameworks = [
   },
 ];
 
-
 const platforms = [
   {
     title: "Netlify",
@@ -105,22 +104,10 @@ const platforms = [
 
 <ContentSection title="Tecnologias" id="technologies">
   <Fragment slot="lead">
-    Tem uma <span class="text-primary">tecnologia</span> em mente?<br/>
+    Tem uma <span class="text-primary">tecnologia</span> em mente?<br />
     A CEOS pode <span class="text-primary">construir</span> uma aplicação com ela
   </Fragment>
-  <TechnologiesList
-    title="CMS"
-    data={cms}
-    url="/technologies"
-  />
-  <TechnologiesList
-    title="Frameworks"
-    data={frameworks}
-    url="/technologies"
-  />
-  <TechnologiesList
-    title="Platforms"
-    data={platforms}
-    url="/technologies"
-  />
+  <TechnologiesList title="CMS" data={cms} url="/technologies" />
+  <TechnologiesList title="Frameworks" data={frameworks} url="/technologies" />
+  <TechnologiesList title="Platforms" data={platforms} url="/technologies" />
 </ContentSection>

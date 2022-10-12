@@ -11,5 +11,5 @@ a,
 }
 
 .btn-poggers {
-  @apply bg-gradient-to-r from-green-500 to-blue-500 transition-all hover:cursor-pointer hover:scale-105;
+  @apply bg-gradient-to-r from-green-500 to-blue-500 transition-all hover:scale-105 hover:cursor-pointer;
 }
