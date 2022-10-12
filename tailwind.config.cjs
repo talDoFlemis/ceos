@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        logo: ["aassassinninjaregular"],
       },
       colors: {
         primary: "var(--color-primary)",
