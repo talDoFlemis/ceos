@@ -1,41 +1,37 @@
 ---
 import { Icon } from "astro-icon";
-import HeroImage from "~/components/hero-image.astro";
 
 const links = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
-  },
-  {
-    url: "https://github.com/withastro/astro",
-    description: "Astro on GitHub",
+    url: "https://github.com/taldoflemis",
+    description: "Taldoflemis on GitHub",
     icon: "fa-brands:github-alt",
   },
   {
     url: "https://astro.build/chat",
-    description: "Astro on Discord",
+    description: "Discord",
     icon: "fa-brands:discord",
   },
   {
     url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
+    description: "Twitter",
     icon: "fa-brands:twitter",
+  },
+  {
+    url: "https://www.linkedin.com/company/ceos-jr-empresa-junior-da-computa%C3%A7%C3%A3o-ufc/",
+    description: "LinkedIn",
+    icon: "fa-brands:linkedin",
   },
 ];
 ---
 
-<footer class="relative flex items-center justify-center h-64">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
-  </div>
+<footer class="relative flex items-center justify-center h-64 sm:h-32">
   <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
     {
       links.map((link) => (
         <li>
           <a
-            class="flex items-center justify-center w-16 h-16 p-4 border-2 border-current rounded-full"
+            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
             href={link.url}
           >
             <span class="sr-only">{link.description}</span>
