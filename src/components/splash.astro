@@ -1,7 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import Starfield from "./starfield.astro";
-import CeosLogo from "@assets/ceoslogo.png";
+import CeosLogo from "../../public/ceoslogo.png";
 ---
 
 <section class="relative h-full bg-white">
@@ -14,11 +14,11 @@ import CeosLogo from "@assets/ceoslogo.png";
       aspectRatio="1:1"
       alt="CEOS logo"
     />
-    <h2 class="flex flex-col items-center justify-center gap-y-10">
+    <h2 class="flex flex-col items-center justify-center gap-y-10 font-sans">
       <div
         class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
       >
-        CEOS
+        <span>CEOS</span>
         <br /> Onde o céu é o
         <br />
         Limite
@@ -26,15 +26,19 @@ import CeosLogo from "@assets/ceoslogo.png";
       </div>
       <a
         href="#contact"
-        class="flex text-blue-500 items-center justify-center gap-3 px-6 py-4 border-2 border-current rounded-lg"
+        class="btn-poggers rounded-full p-4 text-white hover:text-white"
       >
-        <span>Quero fazer um orçamento!</span>
+        <button>Quero fazer um orçamento!</button>
       </a>
     </h2>
   </div>
 </section>
 
 <style>
+ span{
+  font-family: "aassassinninjaregular"
+}
+
   @keyframes float {
     0% {
       transform: translate3d(0, 0, 0);

@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "./theme-switcher.astro";
-import CeosLogo from "@assets/ceoslogo.png";
+import CeosLogo from "../../public/ceoslogo.png";
 import { Image } from "@astrojs/image/components";
 
 const navItems = [
@@ -60,7 +60,7 @@ const navItems = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <Icon name={CeosLogo} class="h-16" />
           </div>
           <nav>
             <ul class="flex flex-col">
@@ -131,4 +131,8 @@ const navItems = [
   .modal.is-open {
     @apply block;
   }
+
+span {
+  font-family: "aassassinninjaregular"
+}
 </style>
