@@ -1,0 +1,27 @@
+---
+import ContentSection from "./content-section.astro";
+import ProjectCard from "./projects-card.astro";
+import projects from "../data/showcase/projects.json";
+---
+
+<ContentSection title="Projetos" id="projects">
+  <Fragment slot="lead">
+    Projetos <span class="text-primary">reais</span>. Aplicações <span
+      class="text-primary">reais</span
+    >.
+    <br />
+    Explore os <span class="text-primary">últimos projetos {" "}</span>da CEOS.
+  </Fragment>
+  <div class="w-full lg:max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        projects.map(({ title, image, url }) => (
+          <ProjectCard title={title} image={image} url={url} />
+        ))
+      }
+    </div>
+    <p class="text-sm text-right">
+      <a class="text-primary" href="/allprojects"> ...e muito mais &rarr;</a>
+    </p>
+  </div>
+</ContentSection>

@@ -1,0 +1,28 @@
+---
+import { Picture } from '@astrojs/image/components';
+
+interface Props{
+  title: string,
+  image: string,
+  url: string,
+}
+
+const { title, image, url } = Astro.props;
+---
+
+<a class="group aspect-video hover:!text-default" href={url}>
+  <figure class="relative w-full h-full overflow-hidden">
+    <Picture src={image} alt={`${title} image`} widths={[600, 400]} aspectRatio="16:9" class="absolute object-cover w-full h-full transition-all duration-300 bg-cover group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20" sizes="(max-width: 800px) 100vw, 400px"
+    />
+    <figcaption class="absolute inset-0">
+      <div
+        class="flex flex-col items-center justify-center h-full gap-2 transition-all duration-300 opacity-0 group-hover:opacity-100 group-focus:opacity-100"
+      >
+        <h3 class="text-xl font-extrabold text-center uppercase">
+          {title}
+        </h3>
+        <p class="px-4 py-2 border border-current">{url}</p>
+      </div>
+    </figcaption>
+  </figure>
+</a>
