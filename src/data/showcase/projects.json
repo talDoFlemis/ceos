@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Amazon",
+    "image": "src/data/showcase/images/amazon.png",
+    "url": "https://amazon.com/"
+  },
+  {
+    "title": "Facebook",
+    "image": "src/data/showcase/images/facebook.webp",
+    "url": "https://www.facebook.com/"
+  },
+  {
+    "title": "Twitch",
+    "image": "src/data/showcase/images/twitch.png",
+    "url": "https://www.twitch.tv/"
+  },
+  {
+    "title": "The Firebase Blog",
+    "image": "src/data/showcase/images/firebase-blog.png",
+    "url": "https://www.firebase.blog/"
+  },
+  {
+    "title": "Spotify",
+    "image": "src/data/showcase/images/spotify.jpg",
+    "url": "https://www.spotify.com/"
+  },
+  {
+    "title": "Mr Fisch",
+    "image": "src/data/showcase/images/mrfisch.png",
+    "url": "https://mrfisch.flemis.xyz/"
+  }
+]
