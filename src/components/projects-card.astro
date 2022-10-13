@@ -7,27 +7,30 @@ interface Props {
   url: string;
 }
 
+const widths = [450, 800];
+const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
+
 const { title, image, url } = Astro.props;
 ---
 
 <a class="group aspect-video hover:!text-default" href={url}>
-  <figure class="relative w-full h-full overflow-hidden">
+  <figure class="overflow-hidden relative w-full h-full">
     <Picture
       src={image}
       alt={`${title} image`}
-      widths={[600, 400]}
+      widths={widths}
       aspectRatio="16:9"
-      class="absolute object-cover w-full h-full transition-all duration-300 bg-cover group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
-      sizes="(max-width: 800px) 100vw, 400px"
+      class="object-cover absolute w-full h-full bg-cover transition-all duration-300 group-hover:opacity-20 group-hover:scale-110 group-focus:opacity-20 group-focus:scale-110"
+      sizes={sizes}
     />
     <figcaption class="absolute inset-0">
       <div
-        class="flex flex-col items-center justify-center h-full gap-2 transition-all duration-300 opacity-0 group-hover:opacity-100 group-focus:opacity-100"
+        class="flex flex-col gap-2 justify-center items-center h-full opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100"
       >
         <h3 class="text-xl font-extrabold text-center uppercase">
           {title}
         </h3>
-        <p class="px-4 py-2 border border-current">{url}</p>
+        <p class="py-2 px-4 border border-current">{url}</p>
       </div>
     </figcaption>
   </figure>
