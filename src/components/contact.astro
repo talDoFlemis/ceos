@@ -9,13 +9,13 @@ import ContentSection from "./content-section.astro";
     > e solicite seu <span class="text-primary">orçamento</span>
   </Fragment>
   <form
-    class="w-full max-w-4xl flex flex-col rounded-lg border-current border-2 justify-center gap-y-4 p-4"
+    class="flex flex-col gap-y-4 justify-center p-4 w-full max-w-4xl rounded-lg border-2 border-current"
   >
     <label for="name">Nome</label>
     <input
       type="text"
       id="name"
-      class="text-sm border border-current rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+      class="block p-2.5 w-full text-sm rounded-lg border border-current focus:ring-primary focus:border-primary"
       placeholder="Mr Fisch"
       required
     />
@@ -23,18 +23,18 @@ import ContentSection from "./content-section.astro";
     <input
       type="email"
       id="email"
-      class="text-sm border border-current rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+      class="block p-2.5 w-full text-sm rounded-lg border border-current focus:ring-primary focus:border-primary"
       placeholder="mrfisch@flemis.com"
       required
     />
     <label for="message">Mensagem</label>
     <textarea
       id="message"
-      class="text-sm border border-current rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+      class="block p-2.5 w-full text-sm rounded-lg border border-current focus:ring-primary focus:border-primary"
       placeholder="Bom dia, gostei muito da CEOS e gostaria de solicitar um orçamento"
       required></textarea>
     <button
-      class="text-white rounded-lg btn-poggers w-full sm:w-1/4 max-w-xs p-2 self-center"
+      class="self-center p-2 w-full max-w-xs text-white rounded-lg sm:w-1/4 btn-poggers"
       >Enviar</button
     >
   </form>

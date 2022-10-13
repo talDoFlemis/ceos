@@ -14,17 +14,17 @@ const navItems = [
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-10 flex items-center justify-between w-full px-8 py-4 text-black border-b border-transparent"
+  class="flex absolute bottom-0 z-10 justify-between items-center py-4 px-8 w-full text-black border-b border-transparent"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Astro</h1>
     <Image src={CeosLogo} width={30} alt="ceos logo" />
-    <span class="hidden sm:block font-bold">CEOS</span>
+    <span class="hidden font-bold sm:block">CEOS</span>
   </a>
   <div>
-    <div class="flex items-center gap-6">
+    <div class="flex gap-6 items-center">
       <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
+        <ul class="flex gap-6 items-center">
           {
             navItems.map(({ title, url }) => (
               <li>
@@ -39,7 +39,7 @@ const navItems = [
       <button
         id="open-nav-button"
         type="button"
-        class="btn sm:hidden"
+        class="sm:hidden btn"
         aria-label="Navigation"
       >
         <Icon pack="mdi" name="menu" class="h-8" />
@@ -47,7 +47,7 @@ const navItems = [
       <ThemeSwitcher />
     </div>
     <div id="menu-modal" class="hidden modal" aria-hidden="true">
-      <div class="fixed inset-0 px-8 py-4 bg-default text-default">
+      <div class="fixed inset-0 py-4 px-8 bg-default text-default">
         <div class="space-y-4" role="dialog" aria-modal="true">
           <header class="text-right">
             <button
@@ -60,7 +60,7 @@ const navItems = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Image src={CeosLogo} width={30}  alt="CEOS logo" />
+            <Image src={CeosLogo} width={30} alt="CEOS logo" />
           </div>
           <nav>
             <ul class="flex flex-col">
