@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 
 interface Props {
   title: string;
@@ -15,13 +15,11 @@ const { title, image, url } = Astro.props;
 
 <a class="group aspect-video hover:!text-default" href={url}>
   <figure class="overflow-hidden relative w-full h-full">
-    <Picture
+    <Image
       src={image}
       alt={`${title} image`}
-      widths={widths}
       aspectRatio="16:9"
       class="object-cover absolute w-full h-full bg-cover transition-all duration-300 group-hover:opacity-20 group-hover:scale-110 group-focus:opacity-20 group-focus:scale-110"
-      sizes={sizes}
     />
     <figcaption class="absolute inset-0">
       <div
